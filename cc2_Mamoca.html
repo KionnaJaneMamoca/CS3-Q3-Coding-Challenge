@@ -35,7 +35,13 @@
         <script>
             //add code to change the color and text of the div element
            function ccolor(){
-           
+                var red = document.getElementById("red").value;
+                var green = document.getElementById("green").value;
+                var blue = document.getElementById("blue").value;
+
+                var rgb = "rgb(" + red + "," + green + "," + blue + ")";
+                document.getElementById("color").style.backgroundColor = rgb;
+                document.getElementById("color").textContent = rgb;
            }
            </script>
     </body>
