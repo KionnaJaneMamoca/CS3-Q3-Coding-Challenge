@@ -27,31 +27,29 @@
 				var b = prompt("Enter Value of b:" );
 				var c = prompt("Enter Value of c:" );
 				
-				function innerSolve(){
+		function innerSolve(){
 				
-					var discriminant = b*b - 4*a*c;
-					var x1 = (-b + Math.sqrt(discriminant))/2*a;
-					var x2 = (-b - Math.sqrt(discriminant))/2*a;
+			var discriminant = b*b - 4*a*c;
+			var x1 = (-b + Math.sqrt(discriminant))/2*a;
+			var x2 = (-b - Math.sqrt(discriminant))/2*a;
 				
-					if(discriminant == 0){
-						return "They are equal: " + x1;
-					}
-				
-					else if(discriminant > 0 ){
-						return "x1 = " + x1 + " and x2 = " + x2; 
-					}
-				
-					else if(discriminant < 0 ){
-						return "The roots are imaginary.";
-					}
+				if(discriminant == 0){
+					return "They are equal: " + x1;
 				}
 				
-			document.getElementById('result').innerHTML = innerSolve();
-			
+				else if(discriminant > 0 ){
+					return "x1 = " + x1 + " and x2 = " + x2; 
+				}
+				
+				else if(discriminant < 0 ){
+					return "The roots are imaginary.";
+				}
 			}
+				
+		document.getElementById('result').innerHTML = innerSolve();
 			
-        </script>
-		
+		}
+			
+        </script>	
     </body>
-	
 </html>
