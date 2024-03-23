@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>One Time Password </title>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+	</head>
+	
+	<body onload="otpnew()">
+	
+		<h1> Final Verification Step </h1>
+		<h2> Current OTP: <span id="otp"> </span> <a onclick="otpnew()" href=""> New OTP </a></h2>
+		<button onclick="compare()"> Enter One Time Password. </button>
+	
+		<script>
+	
+			var num;
+		
+			function otpnew(){
+			
+				num = Math.round(Math.random()*999999);
+				document.getElementById("otp").innerHTML = num;
+				
+			}
+			
+			function compare(){
+			
+				var OTP = num;
+
+				var input = prompt("Enter the OTP: ");
+				
+				if(OTP == input){
+					location.replace("https://www.instagram.com/kiomamoks?igsh=djdkYWw4NjIxNDRj");
+				}
+				else if (OTP != input){
+					alert( "Incorrect OTP. Try again." );
+				}
+				
+			}
+
+		</script>
+		
+	</body>
+	
+</html>
